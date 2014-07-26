@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A6EAA22-0A17-4FB8-9811-959DC72133B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lingo.Test</RootNamespace>
+    <AssemblyName>Lingo.Test</AssemblyName>
+    <ReleaseVersion>0.2-alpha</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Expect Tests\ExpectTest.cs" />
+    <Compile Include="Expect Tests\NumberPredicateTest.cs" />
+    <Compile Include="Expect Tests\StringPredicateTest.cs" />
+    <Compile Include="Expect Tests\ObjectPredicateTest.cs" />
+    <Compile Include="Expect Tests\PredicateNegationTest.cs" />
+    <Compile Include="Expect Tests\CollectionPredicateTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Expect Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Expect\Lingo.csproj">
+      <Project>{A4466478-AEF3-4212-9098-AE5143637974}</Project>
+      <Name>Lingo</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
