@@ -32,7 +32,7 @@ namespace Lingo.Test
 		public void ShouldAcceptCollections()
 		{
 			var expectation = Expect(new[] { "foo" });
-			Assert.IsInstanceOfType(typeof(CollectionExpectation), expectation);
+            Assert.IsInstanceOfType(typeof(CollectionExpectation<string>), expectation);
 		}
 	}
 

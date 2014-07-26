@@ -20,9 +20,9 @@ namespace Lingo
 			return new ObjectExpectation(expected);
 		}
 
-		public static CollectionExpectation Expect<T>(ICollection<T> expected)
+        public static CollectionExpectation<T> Expect<T>(ICollection<T> expected)
 		{
-			return new CollectionExpectation();
+            return new CollectionExpectation<T>(expected);
 		}
 	}
 }
