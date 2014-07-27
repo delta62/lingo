@@ -47,6 +47,9 @@
     <Compile Include="src\Predicates\CollectionPredicate.cs" />
     <Compile Include="src\Expectations\CollectionExpectation.cs" />
     <Compile Include="src\Predicates\CollectionIdentityPredicate.cs" />
+    <Compile Include="src\Predicates\BooleanPredicate.cs" />
+    <Compile Include="src\Predicates\BooleanIdentityPredicate.cs" />
+    <Compile Include="src\Expectations\BooleanExpectation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

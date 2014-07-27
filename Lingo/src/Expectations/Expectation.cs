@@ -24,6 +24,11 @@ namespace Lingo
 		{
             return new CollectionExpectation<T>(expected);
 		}
+
+        public BooleanExpectation Expect(bool expected)
+        {
+            return new BooleanExpectation(expected);
+        }
 	}
 }
 

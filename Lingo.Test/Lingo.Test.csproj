@@ -38,6 +38,7 @@
     <Compile Include="src\ObjectPredicateTest.cs" />
     <Compile Include="src\PredicateNegationTest.cs" />
     <Compile Include="src\CollectionPredicateTest.cs" />
+    <Compile Include="src\BooleanTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
