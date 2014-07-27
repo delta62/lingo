@@ -28,6 +28,20 @@ namespace Lingo
                 actualCopy.Remove(actualItem);
             }
         }
+
+        public void EquivilantTo(ICollection<T> actual)
+        {
+            var msg = "equivilant to";
+            var expEnum = expected.GetEnumerator();
+
+            Test(expected.Count == actual.Count, msg, expected, actual);
+
+            while (expEnum.MoveNext())
+            {
+                var contains = actual.Contains(expEnum.Current);
+                Test(contains, msg, expected, actual);
+            }
+        }
     }
 }
 
