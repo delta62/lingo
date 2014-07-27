@@ -52,12 +52,14 @@ public class StringTest
 Lingo has built-in support for:
 * ints
 * strings
+* bools
 * collections
 * objects
 
 ``` csharp
 Expect(new[] { "test" }).To.Contain("test");
 ```
+
 
 All tests inherit the test methods of `object` tests like you would expect.
 
@@ -66,6 +68,7 @@ var meat = "ham";
 var meatRef = meat;
 Expect(meatRef).To.EqualRef(meat);
 ```
+
 
 You can negate the expectation of any test by using the `Not` property.
 
