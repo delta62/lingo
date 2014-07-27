@@ -2,12 +2,12 @@
 
 namespace Lingo
 {
-	public class NumberPredicate : Predicate
+	public class NumberPredicate : ObjectPredicate
 	{
 		private int expected;
 		private NumberIdentityPredicate be;
 
-		public NumberIdentityPredicate Be
+		public new NumberIdentityPredicate Be
 		{
 			get
 			{
@@ -19,7 +19,7 @@ namespace Lingo
 			}
 		}
 
-		internal NumberPredicate(int expected)
+        internal NumberPredicate(int expected) : base(expected)
 		{
 			this.expected = expected;
 		}

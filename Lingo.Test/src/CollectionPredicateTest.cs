@@ -73,6 +73,19 @@ namespace Lingo.Test
         {
             Expect(strings).To.Equal(new [] { "foo", "bar", "baz", "qux" });
         }
+
+        [Test]
+        public void ShouldTestSubsetSuccess()
+        {
+            Expect(strings).To.Be.SubsetOf(new[] { "foo", "baz", "qux", "bar" });
+        }
+
+        [Test]
+        [ExpectedException(typeof(ExpectationException))]
+        public void ShouldTestSubsetFailure()
+        {
+            Expect(strings).To.Be.SubsetOf(new[] { "foo", "foo", "bar" });
+        }
 	}
 }
 

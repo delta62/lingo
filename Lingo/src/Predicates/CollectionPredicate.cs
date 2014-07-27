@@ -3,14 +3,27 @@ using System.Collections.Generic;
 
 namespace Lingo
 {
-	public class CollectionPredicate<T> : Predicate
+    public class CollectionPredicate<T> : ObjectPredicate
 	{
         private ICollection<T> expected;
+        private CollectionIdentityPredicate<T> be;
 
-        public CollectionPredicate(ICollection<T> expected)
+        public CollectionPredicate(ICollection<T> expected) : base(expected)
 		{
             this.expected = expected;
 		}
+
+        public new CollectionIdentityPredicate<T> Be
+        {
+            get
+            {
+                if (be == null)
+                {
+                    be = new CollectionIdentityPredicate<T>(expected);
+                }
+                return be;
+            }
+        }
 
         public void Contain(T actual)
         {
