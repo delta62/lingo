@@ -1,3 +1,9 @@
 <div class="sidebar">
+    {{ site.title }}
+
+    {% assign pages = site.pages %}
+    {% for node in pages %}
+        <a href="{{ node.url }}" class="nav-item">{{ node.title }}</a>
+    {% endfor %}
 
 </div>

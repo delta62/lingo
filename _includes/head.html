@@ -1,4 +1,11 @@
 <head>
     <meta charset="utf-8" />
-    <title>{{ page.title }}</title>
+    <title>
+        {% if page.title == "Home" %}
+            {{ site.title }}
+        {% else %}
+            {{ site.title }} | {{ page.title }}
+        {% endif %}
+    </title>
+    <link rel="stylesheet" href="/public/site.css" />
 </head>
