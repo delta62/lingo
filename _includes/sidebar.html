@@ -1,9 +1,24 @@
 <div class="sidebar">
-    {{ site.title }}
+    <img class="logo-img" src="/public/lingo.png" alt="Lingo" width="200" />
 
-    {% assign pages = site.pages %}
-    {% for node in pages %}
-        <a href="{{ node.url }}" class="nav-item">{{ node.title }}</a>
-    {% endfor %}
+    <nav class="site-nav">
+        <a href="/home" class="nav-item btn btn-green">
+            <i class="fa fa-home"></i>
+            Home
+        </a>
+        <a href="/api" class="nav-item btn btn-green">
+            <i class="fa fa-list"></i>
+            Documentation
+        </a>
+    </nav>
+
+    <div class="site-meta">
+        <a href="#">
+            <i class="fa fa-github"></i>
+            GitHub
+        </a>
+        |
+        <a href="#">License</a>
+    </div>
 
 </div>
