@@ -1,5 +1,5 @@
 ---
 layout: default
-title: API Documentation
+title: Documentation
 ---
 # {{ page.title }}

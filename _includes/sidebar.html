@@ -1,24 +1,39 @@
 <div class="sidebar">
-    <img class="logo-img" src="/public/lingo.png" alt="Lingo" width="200" />
+    <a href="{{ site.url }}">
+        <img class="logo-img" src="/public/lingo.png" alt="Lingo" />
+    </a>
 
     <nav class="site-nav">
-        <a href="/home" class="nav-item btn btn-green">
-            <i class="fa fa-home"></i>
-            Home
-        </a>
-        <a href="/api" class="nav-item btn btn-green">
-            <i class="fa fa-list"></i>
-            Documentation
-        </a>
+        <div class="nav-item">
+            <a href="/" class="btn">
+                <i class="fa fa-home"></i>
+                Home
+                <i class="fa fa-angle-double-right nav"></i>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/api" class="btn">
+                <i class="fa fa-list"></i>
+                Documentation
+                <i class="fa fa-angle-double-right nav"></i>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/download" class="btn">
+                <i class="fa fa-download"></i>
+                Download
+                <i class="fa fa-angle-double-right nav"></i>
+            </a>
+        </div>
     </nav>
 
     <div class="site-meta">
-        <a href="#">
+        <a href="{{ site.github }}">
             <i class="fa fa-github"></i>
             GitHub
         </a>
         |
-        <a href="#">License</a>
+        <a href="{{ site.license }}">License</a>
     </div>
 
 </div>
