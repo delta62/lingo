@@ -104,3 +104,37 @@ body {
     opacity: 1;
     right: .2em;
 }
+
+.pass {
+    border-color: #46b53e;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 2px;
+}
+
+.pass:after {
+    color: #46b53e;
+    content: "\f05d";
+    display: block;
+    font-style: italic;
+    line-height: 200%;
+    padding: 0 1em;
+    text-align: right;
+}
+
+/* Syntax hilighting */
+.kt {
+    color: #39c;
+}
+
+.s {
+    color: #c36;
+}
+
+.k {
+    color: #369;
+}
+
+.na {
+    color: #933;
+}
