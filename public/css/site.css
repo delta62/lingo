@@ -1,14 +1,17 @@
 
-@font-face {
-  font-family: 'Gochi Hand';
-  font-style: normal;
-  font-weight: 400;
-  src: url('Gochi Hand.woff2') format('woff2'), url('Gochi Hand.woff') format('woff');
-}
-
 body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 2% 2% 2% 24%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #46b53e;
+}
+
+.site-tagline {
+    color: #666;
+    margin: 1.5em 0 2em 0;
+    text-align: center;
 }
 
 .sidebar {
@@ -46,16 +49,16 @@ body {
     font-size: 80%;
 }
 
+.content h2 {
+    padding-top: 2.5em;
+}
+
 .highlight {
     background: #f5f5f5;
     border: 1px solid #ccc;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    padding: 1em;
-}
-
-.site-nav {
-    padding: 1em 0;
+    padding: .2em 1em;
 }
 
 .site-nav .nav-item {
@@ -112,18 +115,42 @@ body {
     border-top-width: 2px;
 }
 
-.pass:after {
-    color: #46b53e;
-    content: "\f05d";
-    display: block;
-    font-style: italic;
-    line-height: 200%;
-    padding: 0 1em;
-    text-align: right;
+/* Page Nav */
+.page-nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: .5em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.page-nav a {
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #333;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0em;
+    padding: .4em .5em;
+    text-decoration: none;
+    transition: border-bottom-color .2s;
+}
+
+.page-nav a:hover {
+    border-bottom-color: #46b53e;
+}
+
+.page-nav a.active {
+    color: #fff;
+    background-color: #46b53e;
+    border-radius: 3px;
+    border-width: 0;
 }
 
 /* Syntax hilighting */
-.kt {
+.kt,
+.na {
     color: #39c;
 }
 
@@ -133,8 +160,4 @@ body {
 
 .k {
     color: #369;
-}
-
-.na {
-    color: #933;
 }

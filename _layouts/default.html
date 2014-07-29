@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
     {% include head.html %}
-
     <body>
-
         {% include sidebar.html %}
-
         <div class="content">
+            {% include navbar.html %}
+
             {{ content }}
         </div>
-
+        <script src="/public/js/jquery-1.11.1.min.js"></script>
+        <script src="/public/js/nav.js"></script>
     </body>
 </html>

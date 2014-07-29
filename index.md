@@ -1,9 +1,22 @@
 ---
 layout: default
 title: Home
+toc:
+    -
+        name: What is Lingo?
+        link: toc_0
+    -
+        name: With Inheritance
+        link: toc_1
+    -
+        name: Without Inheritance
+        link: toc_2
+    -
+        name: Test Cases
+        link: toc_3
 ---
-# {{ site.title }}
-### {{ site.tagline }}
+
+## What is Lingo?
 
 Lingo is an expressive and simple assertion library for your test code. It can be used alongside any testing framework you are already using.
 
