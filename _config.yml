@@ -9,7 +9,6 @@ author:
 github: https://github.com/delta62/lingo
 license: https://github.com/delta62/lingo/blob/master/LICENSE
 
-markdown: redcarpet
-
-redcarpet:
-    extensions: [ 'with_toc_data' ]
+markdown: kramdown
+kramdown:
+    input: GFM
