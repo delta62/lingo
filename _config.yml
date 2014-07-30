@@ -1,6 +1,8 @@
 title: Lingo
 tagline: A BDD-style assertion library for .NET
 
+baseurl: https://delta62.github.io/lingo
+
 author:
     name: Sam Singer Noedel
 

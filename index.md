@@ -18,7 +18,7 @@ toc:
 
 ## What is Lingo?
 
-Lingo is an expressive and simple assertion library for your test code. It can be used alongside any testing framework you are already using.
+Lingo is an expressive and simple assertion library for your test code. It can be used alongside any testing framework you are already using, such as NUnit or MSTest.
 
 ``` csharp
 var foo = "foobar";
@@ -67,14 +67,19 @@ public class StringTest
 ## Supported test cases
 
 Lingo has built-in support for:
+
 * ints
 * strings
 * bools
 * collections
 * objects
 
+Each type has its own overloaded version of the `Expect` method.
+
 ``` csharp
 Expect(new[] { "test" }).To.Contain("test");
+
+Expect(!false).To.Be.True();
 ```
 
 
