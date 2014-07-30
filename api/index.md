@@ -3,26 +3,26 @@ layout: default
 title: Documentation
 toc:
     -
-    name: Negating Tests
-    link: toc_1
+        name: Negating Tests
+        link: toc_1
     -
-    name: Test Failures
-    link: toc_2
+        name: Test Failures
+        link: toc_2
     -
-    name: Objects
-    link: toc_3
+        name: Objects
+        link: toc_3
     -
-    name: Booleans
-    link: toc_8
+        name: Booleans
+        link: toc_8
     -
-    name: Strings
-    link: toc_11
+        name: Strings
+        link: toc_11
     -
-    name: Integers
-    link: toc_18
+        name: Integers
+        link: toc_18
     -
-    name: Collections
-    link: toc_23
+        name: Collections
+        link: toc_23
 ---
 
 ## Negating tests
