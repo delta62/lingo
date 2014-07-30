@@ -1,8 +1,29 @@
 ---
 layout: default
 title: Documentation
+toc:
+    -
+    name: Negating Tests
+    link: toc_1
+    -
+    name: Test Failures
+    link: toc_2
+    -
+    name: Objects
+    link: toc_3
+    -
+    name: Booleans
+    link: toc_8
+    -
+    name: Strings
+    link: toc_11
+    -
+    name: Integers
+    link: toc_18
+    -
+    name: Collections
+    link: toc_23
 ---
-# {{ page.title }}
 
 ## Negating tests
 
@@ -174,7 +195,10 @@ Test that an integer is equal to 0
 Expect(5 - 5).To.Be.Zero();
 ```
 
-## Collection<T> expectations
+## Collection&lt;T&gt; expectations
+
+All expectations utilize generics, and will Lingo will expect you to compare
+collections with the same types.
 
 ### .Contain(T)
 
@@ -185,7 +209,7 @@ var ints = new[] { 1, 2, 4 };
 Expect(ints).To.Contain(4);
 ```
 
-### .Equal(ICollection<T>)
+### .Equal(ICollection&lt;T&gt;)
 
 Test that two collections are equal. Collections are considred equal when they
 contain the same elements in exactly the same order.
@@ -196,7 +220,7 @@ var mints = new [] { 1, 2, 4 };
 Expect(ints).To.Equal(mints);
 ```
 
-### .Be.EquivilantTo(ICollection<T>)
+### .Be.EquivilantTo(ICollection&lt;T&gt;)
 
 Test that the two collections are equivilant. Collections are considered
 equivilant when they contain the same elements (including duplicates), but are
@@ -208,7 +232,7 @@ var backwards = new { 4, 2, 1 };
 Expect(backwards).To.Be.EquivilantTo(ints);
 ```
 
-### .Be.SubsetOf(ICollection<T>)
+### .Be.SubsetOf(ICollection&lt;T&gt;)
 
 Test that a collection is a subset of another.
 
