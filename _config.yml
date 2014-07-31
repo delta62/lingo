@@ -11,4 +11,6 @@ license: https://github.com/delta62/lingo/blob/master/LICENSE
 
 markdown: kramdown
 kramdown:
-    input: GFM
+    toc_levels: [ 2 ]
+    coderay_default_lang: java
+    coderay_line_numbers: nil

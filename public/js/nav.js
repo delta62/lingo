@@ -1,7 +1,7 @@
 jQuery(function($) {
     var $window = $(window);
-    var $sections = $('h2[id]');
-    var $navLinks = $('#page-nav a');
+    var $sections = $('h2').get().reverse();
+    var $navLinks = $('#markdown-toc a');
 
     var setCurrentSection = function() {
         var cutoff = $window.scrollTop();
