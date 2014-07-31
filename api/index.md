@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Documentation
+icon: list
 ---
 
 * le contents

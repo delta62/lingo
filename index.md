@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+icon: home
 ---
 
 * el contento
@@ -8,7 +9,7 @@ title: Home
 
 # {{ site.title }}
 
-#### {{ site.tagline }}
+### {{ site.tagline }}
 
 ## What is Lingo?
 
@@ -18,6 +19,8 @@ Lingo is an expressive and simple assertion library for your test code. It can b
 var foo = "foobar";
 Expect(foo).To.Contain("bar");
 ~~~
+
+Lingo is lightweight, efficient, and thread safe. 
 
 ## Using Lingo with inheritance
 
