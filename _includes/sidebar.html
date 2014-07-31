@@ -6,27 +6,15 @@
     <h5 class="site-tagline">{{ site.tagline }}</h5>
 
     <nav class="site-nav">
-        <div class="nav-item">
-            <a href="{{ site.baseurl }}/" class="btn">
-                <i class="fa fa-home"></i>
-                Home
-                <i class="fa fa-angle-double-right nav"></i>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="{{ site.baseurl }}/api" class="btn">
-                <i class="fa fa-list"></i>
-                Documentation
-                <i class="fa fa-angle-double-right nav"></i>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="{{ site.baseurl }}/download" class="btn">
-                <i class="fa fa-download"></i>
-                Download
-                <i class="fa fa-angle-double-right nav"></i>
-            </a>
-        </div>
+        {% for page in site.pages reversed %}
+            <div class="nav-item">
+                <a href="{{ page.url }}" class="btn">
+                    <i class="fa fa-{{ page.icon }}"></i>
+                    {{ page.title }}
+                    <i class="fa fa-double-right-nav"></i>
+                </a>
+            </div>
+        {% endfor %}
     </nav>
 
     <div class="site-meta">
