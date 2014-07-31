@@ -25,7 +25,7 @@ code,
 
 .site-tagline {
     color: #666;
-    margin: 1.5em 0 2em 0;
+    margin: 1.5em .4em 2em .4em;
     text-align: center;
 }
 
@@ -197,6 +197,10 @@ code,
         width: 2.4em;
     }
 
+    .logo-img {
+        margin-top: .5em;
+    }
+
     .site-tagline {
         display: none;
     }
@@ -215,6 +219,10 @@ code,
 
     span.text {
         display: none;
+    }
+
+    .site-meta {
+        padding: .4em 5%;
     }
 }
 

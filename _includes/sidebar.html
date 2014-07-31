@@ -8,7 +8,7 @@
     <nav class="site-nav">
         {% for page in site.pages reversed %}
             <div class="nav-item">
-                <a href="{{ page.url }}" class="btn">
+                <a href="{{ site.baseurl }}/{{ page.url }}" class="btn">
                     <i class="fa fa-{{ page.icon }}"></i>
                     <span class="text">{{ page.title }}</span>
                     <i class="fa fa-angle-double-right nav"></i>
