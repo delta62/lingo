@@ -73,9 +73,15 @@ code,
     padding-top: 2.5em;
 }
 
+pre {
+    margin: 0;
+    padding: 0;
+}
+
 .code,
 .language-csharp {
-    padding: .2em 1em;
+    display: block;
+    padding: .8em 1em;
 }
 
 .site-nav .nav-item {

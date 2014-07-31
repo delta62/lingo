@@ -13,5 +13,6 @@ markdown: kramdown
 kramdown:
     input: GFM
     toc_levels: [ 2 ]
-    coderay_default_lang: java
+    hard_wrap: false
+    # coderay_default_lang: java
     coderay_line_numbers: nil
