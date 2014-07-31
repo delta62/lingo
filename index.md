@@ -2,6 +2,7 @@
 layout: default
 title: Home
 icon: home
+weight: 0
 ---
 
 * el contento

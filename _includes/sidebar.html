@@ -1,12 +1,11 @@
 <div class="sidebar">
-    <a href="{{ site.url }}">
-        <img class="logo-img" src="{{ site.baseurl }}/public/lingo.png" alt="Lingo" />
-    </a>
+    <img class="logo-img" src="{{ site.baseurl }}/public/lingo.png" alt="Lingo" />
 
     <h5 class="site-tagline">{{ site.tagline }}</h5>
 
     <nav class="site-nav">
-        {% for page in site.pages reversed %}
+        {% assignt page_list = site.pages | sort: 'weight' %}
+        {% for page in page_list %}
             <div class="nav-item">
                 <a href="{{ site.baseurl }}{{ page.url }}" class="btn">
                     <i class="fa fa-{{ page.icon }}"></i>

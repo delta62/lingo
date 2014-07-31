@@ -75,6 +75,10 @@ code,
     padding-top: 2.5em;
 }
 
+.content a {
+    color: #666;
+}
+
 pre {
     margin: 0;
     padding: 0;

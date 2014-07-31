@@ -2,6 +2,7 @@
 layout: default
 title: Documentation
 icon: list
+weight: 50
 ---
 
 * le contents
