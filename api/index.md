@@ -14,9 +14,9 @@ icon: list
 You can negate any test in Lingo's API by prepending `.Not` right after the
 `Expect(...)` call.
 
-~~~
+```
 Expect("foo").Not.To.Equal("bar")
-~~~
+```
 
 ### Test Failures
 
@@ -32,29 +32,29 @@ derivitaves, although they may be overridden for class-specific logic.
 
 Test equality between two objects using `.Equals()`
 
-~~~
+```
 Expect(new object()).To.Equal(new object());
-~~~
+```
 
 ### .EqualRef(object)
 
 Test referential equality between two objects. That is, expects both objects to
 point to the same location in memory.
 
-~~~
+```
 var foo = new object();
 var bar = foo;
 Expect(bar).To.EqualRef(foo);
-~~~
+```
 
 ### .Be.Null()
 
 Test that an object is null.
 
-~~~
+```
 object[] things = null;
 Expect(things).To.Be.Null();
-~~~
+```
 
 ### .Be.InstanceOf(Type)
 
@@ -62,9 +62,9 @@ Test than an object is of a certain type. This test will pass if the object
 under test is a subclass of the passed type, or if the object under test
 implements the interface `Type`.
 
-~~~
+```
 Expect("foo").To.Be.InstanceOf(typeof(IComparable));
-~~~
+```
 
 ## Boolean expectations
 
@@ -72,17 +72,17 @@ Expect("foo").To.Be.InstanceOf(typeof(IComparable));
 
 Test that a value is true.
 
-~~~
+```
 Expect(1 == 1).To.Be.True();
-~~~
+```
 
 ### .Be.False()
 
 Test that a value is false.
 
-~~~
+```
 Expect(1 == 2).To.Be.False();
-~~~
+```
 
 ## String expectations
 
@@ -93,57 +93,57 @@ All string assertions are case-sensitive.
 Overrides the default `.Equal(object)` to utilize string comparison. Will throw
 an exception if the two strings are not equivilant.
 
-~~~
+```
 Expect("redundancy").To.Equal("redundancy");
-~~~
+```
 
 ### .Contain(string)
 
 Test that one string contains another. A string will always contain itself.
 
-~~~
+```
 Expect("foobar").To.Contain("ooba");
-~~~
+```
 
 ### .StartWith(string)
 
 Test that one string begins with another. A string will always start with
 itself.
 
-~~~
+```
 Expect("fat pants").To.StartWith("f");
-~~~
+```
 
 ### .EndWith(string)
 
 Test that one string ends with another. A string will always end with
 itself.
 
-~~~
+```
 Expect("techno").To.EndWith("no");
-~~~
+```
 
 ### .Match(Regex), .Match(string)
 
 Test that the string under test matches a regular expression.
 
-~~~
+```
 // Match against Regex objects
 var re = new Regex(@"\d+$");
 Expect("abc123").To.Match(re);
 
 // Match against strings
 Expect("foobar").To.Match(@"\w{3}");
-~~~
+```
 
 ### .Be.Empty()
 
 Test that the string under test is empty.
 
-~~~
+```
 var comments = "";
 Expect(comments).To.Be.Empty();
-~~~
+```
 
 ## int expectations
 
@@ -151,33 +151,33 @@ Expect(comments).To.Be.Empty();
 
 Overrides the default `.Equal(object)` for integer comparison.
 
-~~~
+```
 Expect(2 + 2).To.Equal(4);
-~~~
+```
 
 ### .Be.LessThan(int)
 
 Test that an integer is smaller than a certain value
 
-~~~
+```
 Expect(3).To.Be.LessThan(4);
-~~~
+```
 
 ### .Be.GreaterThan(int)
 
 Test that an integer is larger than a certain value
 
-~~~
+```
 Expect(9).To.Be.GreaterThan(-45);
-~~~
+```
 
 ### .Be.Zero()
 
 Test that an integer is equal to 0
 
-~~~
+```
 Expect(5 - 5).To.Be.Zero();
-~~~
+```
 
 ## Collection&lt;T&gt; expectations
 
@@ -188,21 +188,21 @@ collections with the same types.
 
 Test that a collection contains a given element.
 
-~~~
+```
 var ints = new[] { 1, 2, 4 };
 Expect(ints).To.Contain(4);
-~~~
+```
 
 ### .Equal(ICollection&lt;T&gt;)
 
 Test that two collections are equal. Collections are considred equal when they
 contain the same elements in exactly the same order.
 
-~~~
+```
 var ints = new[] { 1, 2, 4 };
 var mints = new [] { 1, 2, 4 };
 Expect(ints).To.Equal(mints);
-~~~
+```
 
 ### .Be.EquivilantTo(ICollection&lt;T&gt;)
 
@@ -210,18 +210,18 @@ Test that the two collections are equivilant. Collections are considered
 equivilant when they contain the same elements (including duplicates), but are
 not necessarily in the same order.
 
-~~~
+```
 var ints = new[] { 1, 2, 4 };
 var backwards = new { 4, 2, 1 };
 Expect(backwards).To.Be.EquivilantTo(ints);
-~~~
+```
 
 ### .Be.SubsetOf(ICollection&lt;T&gt;)
 
 Test that a collection is a subset of another.
 
-~~~
+```
 var ints = new[] { 1, 2, 4 };
 var firstTwo = new[] { 1, 2 };
 Expect(firstTwo).To.Be.SubsetOf(ints);
-~~~
+```
