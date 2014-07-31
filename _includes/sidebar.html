@@ -10,7 +10,7 @@
             <div class="nav-item">
                 <a href="{{ page.url }}" class="btn">
                     <i class="fa fa-{{ page.icon }}"></i>
-                    {{ page.title }}
+                    <span class="text">{{ page.title }}</span>
                     <i class="fa fa-angle-double-right nav"></i>
                 </a>
             </div>
@@ -20,10 +20,10 @@
     <div class="site-meta">
         <a href="{{ site.github }}">
             <i class="fa fa-github"></i>
-            GitHub
+            <span class="text">GitHub</span>
         </a>
-        |
-        <a href="{{ site.license }}">License</a>
+        <span class="text">|</span>
+        <a href="{{ site.license }}"><span class="text">License</span></a>
     </div>
 
 </div>

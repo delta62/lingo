@@ -36,7 +36,6 @@ code,
     box-shadow: 0 0 1.2em -.6em #000;
     left: 0;
     max-width: 16em;
-    min-width: 12em;
     position: fixed;
     top: 0;
     width: 20%;
@@ -168,4 +167,66 @@ code,
     background-color: #46b53e;
     border-radius: 3px;
     border-width: 0;
+}
+
+@media all and (max-width: 1200px) {
+
+    .content {
+        margin-top: 0;
+    }
+
+    #markdown-toc {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    .content {
+        margin: 0 2em 0 8em;
+    }
+
+    .sidebar {
+        font-size: 2.4em;
+        text-align: center;
+        width: 2.4em;
+    }
+
+    .site-tagline {
+        display: none;
+    }
+
+    .nav {
+        opacity: 0 !important;
+    }
+
+    .site-nav .btn {
+        line-height: 100%;
+    }
+
+    .site-nav .btn:after {
+        border-width: 0px 0px 0.3em 0.3em;
+    }
+
+    span.text {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    .content {
+        margin-left: 18em;
+        margin-right: 2em;
+    }
 }
