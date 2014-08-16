@@ -2,11 +2,11 @@
 
 namespace Lingo
 {
-	public class StringIdentityPredicate : Predicate
+    public class StringIdentityPredicate : ObjectIdentityPredicate
 	{
 		private string expected;
 
-		internal StringIdentityPredicate(string expected, bool negate)
+        internal StringIdentityPredicate(string expected, bool negate) : base(expected)
 		{
 			this.expected = expected;
 			Inverted = negate;

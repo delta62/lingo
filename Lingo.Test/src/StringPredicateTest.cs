@@ -108,6 +108,13 @@ namespace Lingo.Test
 			var bar = foo;
 			Expect(foo).To.EqualRef(bar);
 		}
+
+        [Test]
+        public void ShouldInheritObjectIdentityTests()
+        {
+            string foo = null;
+            Expect(foo).To.Be.Null();
+        }
 	}
 }
 
