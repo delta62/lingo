@@ -77,4 +77,5 @@ var seattleWeather = "rainy";
 Expect(seattleWeather).Not.To.Equal("sunny");
 ```
 
+For full documentation, please visit [the website](http://delta62.github.io/lingo/).
 
