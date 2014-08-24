@@ -6,12 +6,19 @@ weight: 100
 ---
 # Download
 
-Lingo comes in several different flavors: it's been tested in both Mono and
-Microsoft .NET environments, and builds are available for anything since
-.NET 3.5.
+Lingo is flexible: it's been tested in both Mono and Microsoft .NET
+environments, and builds are available for anything since .NET 2.0.
 
 Once you've added the assembly to your project, you'll need to add a
 `using Lingo;` statement to your source code.
+
+## NuGet Package Manager
+
+The easiest way to start using Lingo is via NuGet:
+
+```
+Install-Package Lingo
+```
 
 ## Precompiled Binaries
 
