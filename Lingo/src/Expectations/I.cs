@@ -25,6 +25,11 @@ namespace Lingo
             return new CollectionExpectation<T>(expected);
 		}
 
+        public static ComparableExpectation Expect(IComparable expected)
+        {
+            return new ComparableExpectation(expected);
+        }
+
         public static BooleanExpectation Expect(bool expected)
         {
             return new BooleanExpectation(expected);

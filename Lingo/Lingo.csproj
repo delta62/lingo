@@ -33,9 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Expectations\ComparableExpectation.cs" />
     <Compile Include="src\Expectations\NumberExpectation.cs" />
     <Compile Include="src\Expectations\ObjectExpectation.cs" />
     <Compile Include="src\Expectations\StringExpectation.cs" />
+    <Compile Include="src\Predicates\ComparableIdentityPredicate.cs" />
+    <Compile Include="src\Predicates\ComparablePredicate.cs" />
     <Compile Include="src\Predicates\NumberPredicate.cs" />
     <Compile Include="src\Exceptions\ExpectationException.cs" />
     <Compile Include="src\Predicates\StringPredicate.cs" />

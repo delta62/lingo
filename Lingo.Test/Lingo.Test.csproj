@@ -34,6 +34,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\ComparablePredicateTest.cs" />
     <Compile Include="src\ExpectTest.cs" />
     <Compile Include="src\NumberPredicateTest.cs" />
     <Compile Include="src\StringPredicateTest.cs" />

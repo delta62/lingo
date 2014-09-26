@@ -28,6 +28,14 @@ namespace Lingo.Test
 			Assert.IsInstanceOf(typeof(NumberExpectation), expectation);
 		}
 
+        [Test]
+        public void ShouldAcceptComparables()
+        {
+            IComparable comparable = 8;
+            var expectation = Expect(comparable);
+            Assert.IsInstanceOf(typeof(ComparableExpectation), expectation);
+        }
+
 		[Test]
 		public void ShouldAcceptCollections()
 		{
@@ -59,6 +67,20 @@ namespace Lingo.Test
 			var expectation = I.Expect(2);
 			Assert.IsInstanceOf(typeof(NumberExpectation), expectation);
 		}
+
+        [Test]
+        public void ShouldAcceptComparablesWithoutInheriting()
+        {
+            var expectation = I.Expect(DateTime.Now);
+            Assert.IsInstanceOf(typeof(ComparableExpectation), expectation);
+        }
+
+        [Test]
+        public void ShouldAcceptCollectionsWithoutInheriting()
+        {
+            var expectation = I.Expect(new[] { "foo" });
+            Assert.IsInstanceOf(typeof(CollectionExpectation<string>), expectation);
+        }
 	}
 
 	[TestFixture]

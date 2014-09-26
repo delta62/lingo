@@ -24,6 +24,7 @@ namespace Lingo
 			Test(expected > actual, msg, expected, actual);
 		}
 
+        [Obsolete("Please use .Equal instead.")]
 		public void Zero()
 		{
 			var msg = "equal";
